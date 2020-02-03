@@ -1,12 +1,9 @@
 (function($, window) {
     $(function() {
         // この中に処理を書きます
-        var i = 0;
-        while (i <= 2) {
-            var a = $('#index').find('li').eq(i).text();
-            alert(a + a.length + "文字");
-            i++
-        }
-       
+       $('#index').find('li').each(function() {
+           var x = ($(this).text().length);
+           $(this).append("[" + x + "文字]");
+       });
     });
 })(jQuery, window);
